@@ -34,7 +34,7 @@ chair_removed = False
 
 while True:
     # new_frame_time = time.time()
-    success, img = cap.read()
+    success, img = cap.read() #success is a boolean expression in this and img is frame of the video 
     results = model(img, stream=True)
 
     chair_removed = True
