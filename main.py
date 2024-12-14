@@ -53,7 +53,7 @@ while True:
             # Class Name
             cls = int(box.cls[0])
             currentClass = classNames[cls]
-            if currentClass == "chair" or (currentClass == "person" and conf > 0.5):
+            if (currentClass == "chair" or currentClass == "person" and conf > 0.5):
                 cvzone.cornerRect(img, (x1, y1, w, h))
                 cvzone.putTextRect(img, f'{currentClass} {conf}', (max(0, x1), max(35, y1)), scale=1, thickness=1)
 
